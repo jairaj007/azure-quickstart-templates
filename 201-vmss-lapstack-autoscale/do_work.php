@@ -19,6 +19,7 @@
       $num = $_GET["num"];
       for ($x = 0; $x <= $num * 3900000; $x++)
       {
+	echo "<h1>Hello</h1>";
         $var = $num+1;
       }
     }
