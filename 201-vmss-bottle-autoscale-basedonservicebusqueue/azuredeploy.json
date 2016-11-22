@@ -359,7 +359,7 @@
                   "metricName": "MessageCount",
                   "metricNamespace": "",
                   "metricResourceUri": "/subscriptions/d24f33c8-abb9-434a-8414-97ea4c2afed6/resourceGroups/VMSS8/providers/Microsoft.ServiceBus/namespaces/vmsseight/queues/vmsseightqueue",
-                  //"metricResourceUri": "[concat('/subscriptions/',subscription().subscriptionId, '/resourceGroups/',  resourceGroup().name, '/providers/Microsoft.Compute/virtualMachineScaleSets/', parameters('vmSSName'))]",
+                  "metricResourceUri": "[concat('/subscriptions/',subscription().subscriptionId, '/resourceGroups/',  resourceGroup().name, '/providers/Microsoft.Compute/virtualMachineScaleSets/', parameters('vmSSName'))]",
                   "timeGrain": "PT1M",
                   "statistic": "Average",
                   "timeWindow": "PT5M",
