@@ -16,11 +16,15 @@ keepworking = False  # boolean to switch worker thread on or off
 # thread which maximizes CPU usage while the keepWorking global is True
 def workerthread():
     # outer loop to run while waiting
+    from azure.servicebus import ServiceBusService, Message, Queue
+    bus_read_service = ServiceBusService(
+        service_namespace='vmsseight',
+        shared_access_key_name='ListenOneTime',
+        shared_access_key_value='OhFgmG5Cr/K9aOrE29YL7eXERzmUb3Fpf7J+FoBhiMw=')
     while (True):
         # main loop to thrash the CPI
         while (keepworking == True):
-            for x in range(1, 69):
-                y = math.factorial(x)
+            msg = bus_read_service.receive_queue_message('vmsseightqueue', peek_lock=False)
         time.sleep(3)
 
 
